@@ -1,0 +1,122 @@
+/* *{
+    box-sizing: border-box;
+} */
+body{
+    background: url(https://i.ytimg.com/vi/i8HRfEs84DY/maxresdefault.jpg);
+    background-size: 150vw 150vh;
+    background-position-x: -20vw;
+    background-position-y: 0vh;
+    background-repeat: no-repeat;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(21, 9, 44, 0.418);
+    /* Used to blur a div */
+    /* -webkit-filter: blur(5px);             
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px); */
+
+    /* For background blur  */
+    backdrop-filter: blur(10px);
+
+}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 3rem;
+    font-weight:bolder;
+    color: whitesmoke;
+    animation: glowing 1s ease-in-out alternate infinite;
+}
+@keyframes glowing {
+    from{
+        text-shadow: 0 0 20px #000;
+     }
+     to{
+       text-shadow: 0 0 50px #ffffff,
+                   0 0 10px #ffffff;
+     }
+}
+
+.grootImage{
+    display: flex;
+    height: 130px;
+    width: 130px;
+}
+.grootImage img{
+    width: 100%;
+    height: 100%;
+}
+.main{
+    display:block;
+    justify-content: center;
+    align-items: center;
+}
+#inputText , #outputText , #translateBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#inputText , #outputText{
+    width: 500px;
+    background: rgba(7, 6, 71, 0.322);
+    margin: 20px 20px;
+    backdrop-filter: blur(10px);
+    outline: none;
+    border: none;
+    font-size: 2rem;
+    font-family: 'Amatic SC', cursive;
+    font-weight:bolder;
+    color: white;
+}
+#inputText::placeholder{
+    color: rgba(255, 255, 255, 0.418);
+}
+#translateBtn{
+    background: rgba(21, 9, 44, 0.445);
+    height:50px;
+    width: 400px;
+    backdrop-filter: blur(10px);
+    outline: none;
+    /* border: none; */
+    font-size: 1.5rem;
+    margin: 0px 50px;
+    font-family: 'Amatic SC', cursive;
+    color: white;
+    font-weight: bolder;
+    border: 1px;
+}
+#translateBtn:hover{
+    cursor: pointer;
+    background: rgba(21, 9, 44, 0);
+    color: white;
+    border: 1px solid rgba(21, 9, 44, 0.445) ;
+    transition-duration: 1s;
+}
+#translateBtn:active{
+    transform: rotateX(360deg);
+    transition-duration: 0.1s;
+}
+
+@media(max-width:700px){
+    body{
+        background:url(https://www.kolpaper.com/wp-content/uploads/2020/11/iPhone-Baby-Groot-Wallpaper.jpg);
+        background-size: 120vw 120vh;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+    #inputText , #outputText {
+        width: 80vw;
+    }
+    #translateBtn{
+        width: 60vw;
+    }
+}
